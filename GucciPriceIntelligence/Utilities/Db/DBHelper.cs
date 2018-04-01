@@ -23,10 +23,10 @@ namespace GucciPriceIntelligence.Utilities.Db
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
             try
             {
-                if (connection.State.ToString() != "Open")
-                {
-                    connection.Open();
-                }
+                //if (connection.State.ToString() != "Open")
+                //{
+                //    connection.Open();
+                //}
                 return true;
             }
             catch (SqlException ex)
