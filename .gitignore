@@ -241,3 +241,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 GucciPriceIntelligence/bin/*
+GucciPriceIntelligence/Content/css/bootstrap.min.css
