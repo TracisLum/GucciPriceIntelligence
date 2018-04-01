@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+GucciPriceIntelligence/compilerconfig.json
+GucciPriceIntelligence/compilerconfig.json.defaults
+/GucciPriceIntelligence/Content/css/bootstrap.min.css
