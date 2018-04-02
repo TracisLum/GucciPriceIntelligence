@@ -11,44 +11,36 @@ namespace GucciPriceIntelligence.Utilities.Db
     public class DbHelper
     {
         public SqlConnection connection;
+        public SqlCommand command;
+        public SqlDataReader reader;
 
         public DbHelper()
         {
-            OpenConnection();
+            Init();
         }
 
-        //Open _connection
-        public bool OpenConnection()
+        //Intialise DB entities
+        private void Init()
         {
             connection = new SqlConnection(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            try
-            {
-                //if (connection.State.ToString() != "Open")
-                //{
-                //    connection.Open();
-                //}
-                return true;
-            }
-            catch (SqlException ex)
-            {
-                return false;
-            }
+            command = connection.CreateCommand();
         }
 
-        //Close _connection
-        public bool CloseConnection()
+        //Execute DB reader
+        public void ExecuteReader()
         {
-            try
-            {
-                connection.Close();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            if(connection.State!= ConnectionState.Open)
+                connection.Open();
+            reader = command.ExecuteReader();
         }
 
-        
+        //Recycle DB entities memory
+        public void Recycle()
+        {
+            if(reader!=null)
+                reader.Dispose();
+            connection.Close();
+            connection.Dispose();
+        }
     }
 }
