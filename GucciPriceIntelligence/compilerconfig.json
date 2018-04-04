@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "outputFile": "Content/css/main.css",
+    "inputFile": "Content/scss/main.scss",
+    "includeInProject": true,
+    "sourceMap": false
+  }
+]

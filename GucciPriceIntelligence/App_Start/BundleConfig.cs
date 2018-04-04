@@ -25,7 +25,8 @@ namespace GucciPriceIntelligence
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/css/bootstrap-lux.css",
-                      "~/Content/css/site.css"));
+                      "~/Content/css/site.css",
+                      "~/Content/css/main.css"));
         }
     }
 }
