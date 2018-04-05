@@ -17,7 +17,7 @@
     <AssemblyName>GucciPriceIntelligence</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -196,8 +196,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,7 +223,18 @@
     <Content Include="Content\css\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="Content\image\Boy_Homepage_Cover.jpg" />
     <Content Include="Content\image\HomepageHeroHeaderMedium_GQ_001_Default.jpg" />
+    <Content Include="Content\image\Men_HomePage_Cover.jpg" />
+    <Content Include="Content\image\products\categories\Men_Bag_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Boy_Homepage_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Men_Bag_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Men_HomePage_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Women_Handbag_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Women_Homepage_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Women_Ready_to_Wear_Cover.jpg" />
+    <Content Include="Content\image\products\categories\women\Women_Wallets_and_Small_Accessories_Cover.jpg" />
+    <Content Include="Content\image\Women_Homepage_Cover.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -241,6 +254,7 @@
     </None>
     <Content Include="Content\scss\main.scss" />
     <Content Include="Content\scss\_banner.scss" />
+    <Content Include="Content\scss\_responsive.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -288,9 +302,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_HomeBanner.cshtml" />
+    <Content Include="Views\Shop\Category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -314,11 +330,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54830</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:54830/</IISUrl>
+          <IISUrl>http://gpi.dev.com</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,1 +1,19 @@
 ﻿@import '_banner.scss';
+@import '_responsive.scss';
+
+.navbar{
+    font-size:0.9rem;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+}
+
+.category-gallery img{
+    max-width:100%;
+}
+
+.blank-space{
+    height:60px;
+    width:100%;
+}
