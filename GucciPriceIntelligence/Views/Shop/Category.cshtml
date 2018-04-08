@@ -1,8 +1,44 @@
 ﻿@model GucciPriceIntelligence.Models.Entities.Category
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.PageName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
+<div class="blank-space"></div>
 
+<div class="container">
+    <div class="row">
+        <div class="row image-gallery-container">
+            <div class="col-md-12">
+                <h1>@Model.CategoryName</h1>
+            </div>
+            <div class="col-md-4 image-gallery-item">
+                <a href="@Url.Action("Category", "Shop", new {category = "Boys"})">
+                    <img src="/Content/image/Boy_Homepage_Cover.jpg" alt="" />
+                </a>
+                <div class="image-gallery-item-text-content">
+                    <h3 class="text-center"><a href="@Url.Action("Category", "Shop", new {category = "Boys"})">Boys</a></h3>
+                </div>
+            </div>
+            <div class="col-md-4 image-gallery-item">
+                <a href="@Url.Action("Category", "Shop", new {category = "Men"})">
+                    <img src="/Content/image/Men_HomePage_Cover.jpg" alt="" />
+                </a>
+                <div class="image-gallery-item-text-content">
+                    <h3 class="text-center"><a href="@Url.Action("Category", "Shop", new {category = "Men"})">Men</a></h3>
+                </div>
+            </div>
+            <div class="col-md-4 image-gallery-item">
+                <a href="@Url.Action("Category", "Shop", new {category = "Women"})">
+                    <img src="/Content/image/Women_Homepage_Cover.jpg" alt="" />
+                </a>
+                <div class="image-gallery-item-text-content">
+                    <h3 class="text-center"><a href="@Url.Action("Category", "Shop", new {category = "Women"})">Women</a></h3>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="blank-space"></div>

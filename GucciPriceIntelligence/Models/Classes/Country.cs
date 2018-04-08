@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using GucciPriceIntelligence.Models.Classes;
 using GucciPriceIntelligence.Utilities.Db;
 
 namespace GucciPriceIntelligence.Models.Entities
 {
-    public class Country
+    public class Country : BaseModelClass
     {
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public float ExchangeRate { get; set; }
+        public string CountryCode { get; set; }
+        public string CountryName { get; set; }
+        public float CountryExchangeRate { get; set; }
         public DateTime LastUpdate { get; set; }
     }
 }

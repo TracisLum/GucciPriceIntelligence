@@ -15,10 +15,6 @@
     font-size: 1.5rem;
 }
 
-.category-gallery img{
-    max-width:100%;
-}
-
 .blank-space{
     height:60px;
     width:100%;
@@ -35,14 +31,16 @@
     padding: 0 0 20px;
 }
 
-.category-gallery{
-    .category-name{
+.image-gallery-container{
+    .image-gallery-item{
+        img {
+            max-width:100%;
+        }
+    }
+    .image-gallery-item-text-content{
         padding:20px 0;
         a:hover{
             text-decoration:none;
         }
     }
-}
-.category-name{
-
 }

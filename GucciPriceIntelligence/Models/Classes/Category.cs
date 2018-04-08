@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using GucciPriceIntelligence.Models.Classes;
 
 namespace GucciPriceIntelligence.Models.Entities
 {
-    public class Category
+    public class Category : BaseModelClass
     {
-        public string Name { get; set; }
-        public int Level { get; set; }
+        public string CategoryName { get; set; }
+        public int CategoryLevel { get; set; }
     }
 }

@@ -5,12 +5,12 @@ namespace GucciPriceIntelligence.Controllers
 {
     public class ShopController : Controller
     {
-        public ActionResult Category(string categoryName)
+        public ActionResult Category(string category)
         {
-            var category = new Category();
-            category.Name = categoryName;
-            ViewBag.Title = categoryName;
-            return View(category);
+            var categoryInstance = new Category();
+            categoryInstance.PageName = category;
+            categoryInstance.CategoryName = category;
+            return View(categoryInstance);
         }
     }
 }

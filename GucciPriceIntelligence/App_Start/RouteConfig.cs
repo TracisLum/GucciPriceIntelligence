@@ -14,9 +14,15 @@ namespace GucciPriceIntelligence
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "Product",
+                "Shop/{category}/{product}",
+                new { controller = "Shop", action = "Category" }
+            );
+
+            routes.MapRoute(
                 "Category",
-                "Shop/Category/{category}",
-                new { Controller = "Shop", action = "Category"}
+                "Shop/{category}",
+                new { controller = "Shop", action = "Category"}
             );
 
             routes.MapRoute(
