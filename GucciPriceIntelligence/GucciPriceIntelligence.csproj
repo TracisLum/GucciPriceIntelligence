@@ -196,13 +196,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.cs" />
+    <Compile Include="Migrations\201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.Designer.cs">
+      <DependentUpon>201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ViewModels\CategoryViewModels.cs" />
     <Compile Include="Models\Classes\BaseModelClass.cs" />
     <Compile Include="Models\Classes\Country.cs" />
     <Compile Include="Models\Classes\Product.cs" />
@@ -211,6 +218,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utilities\Db\CategoryDbContext.cs" />
     <Compile Include="Utilities\Db\CountryHelper.cs" />
     <Compile Include="Utilities\Db\CategoryHelper.cs" />
     <Compile Include="Utilities\Db\DBHelper.cs" />
@@ -227,12 +235,8 @@
     <Content Include="Content\image\HomepageHeroHeaderMedium_GQ_001_Default.jpg" />
     <Content Include="Content\image\Men_HomePage_Cover.jpg" />
     <Content Include="Content\image\products\categories\boys\Banner_boys.jpg" />
-    <Content Include="Content\image\products\categories\Men_Bag_Cover.jpg" />
-    <Content Include="Content\image\products\categories\women\Boy_Homepage_Cover.jpg" />
-    <Content Include="Content\image\products\categories\women\Men_Bag_Cover.jpg" />
-    <Content Include="Content\image\products\categories\women\Men_HomePage_Cover.jpg" />
+    <Content Include="Content\image\products\categories\men\Men_Bag_Cover.jpg" />
     <Content Include="Content\image\products\categories\women\Women_Handbag_Cover.jpg" />
-    <Content Include="Content\image\products\categories\women\Women_Homepage_Cover.jpg" />
     <Content Include="Content\image\products\categories\women\Women_Ready_to_Wear_Cover.jpg" />
     <Content Include="Content\image\products\categories\women\Women_Wallets_and_Small_Accessories_Cover.jpg" />
     <Content Include="Content\image\Women_Homepage_Cover.jpg" />
@@ -316,6 +320,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.resx">
+      <DependentUpon>201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

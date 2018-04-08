@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using GucciPriceIntelligence.Models.Classes;
 
-namespace GucciPriceIntelligence.Models.Entities
+namespace GucciPriceIntelligence.Models.Classes
 {
-    public class Category : BaseModelClass
+    public class Category
     {
-        public string CategoryName { get; set; }
-        public int CategoryLevel { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int CatLevel { get; set; }
+        public int ParentCateId { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

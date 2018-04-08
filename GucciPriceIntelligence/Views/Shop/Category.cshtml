@@ -1,6 +1,6 @@
-﻿@model GucciPriceIntelligence.Models.Entities.Category
+﻿@model GucciPriceIntelligence.Models.CategoryViewModels
 @{
-    ViewBag.Title = Model.PageName;
+    ViewBag.Title = Model.CategoryName;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,32 +12,22 @@
             <div class="col-md-12">
                 <h1>@Model.CategoryName</h1>
             </div>
-            <div class="col-md-4 image-gallery-item">
-                <a href="@Url.Action("Category", "Shop", new {category = "Boys"})">
-                    <img src="/Content/image/Boy_Homepage_Cover.jpg" alt="" />
-                </a>
-                <div class="image-gallery-item-text-content">
-                    <h3 class="text-center"><a href="@Url.Action("Category", "Shop", new {category = "Boys"})">Boys</a></h3>
+            @foreach (var category in Model.SubCategories)
+            {
+                <div class="col-md-4 image-gallery-item">
+                    <a href="@Url.Action("ListProduct", "Category", new {category = category.Name})">
+                        @{
+                            string imageUrl = category.ImageUrl.Replace('\\', '/');
+                        }
+                        <img src="/Content/image/@imageUrl" alt = "" />
+                    </a>
+                    <div class="image-gallery-item-text-content">
+                        <h3 class="text-center"><a href="@Url.Action("ListProduct", "ListProduct", new {category = category.Name})">@category.Name.Replace('-',' ')</a></h3>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 image-gallery-item">
-                <a href="@Url.Action("Category", "Shop", new {category = "Men"})">
-                    <img src="/Content/image/Men_HomePage_Cover.jpg" alt="" />
-                </a>
-                <div class="image-gallery-item-text-content">
-                    <h3 class="text-center"><a href="@Url.Action("Category", "Shop", new {category = "Men"})">Men</a></h3>
-                </div>
-            </div>
-            <div class="col-md-4 image-gallery-item">
-                <a href="@Url.Action("Category", "Shop", new {category = "Women"})">
-                    <img src="/Content/image/Women_Homepage_Cover.jpg" alt="" />
-                </a>
-                <div class="image-gallery-item-text-content">
-                    <h3 class="text-center"><a href="@Url.Action("Category", "Shop", new {category = "Women"})">Women</a></h3>
-                </div>
-            </div>
+            }
         </div>
-        
+
     </div>
 </div>
 

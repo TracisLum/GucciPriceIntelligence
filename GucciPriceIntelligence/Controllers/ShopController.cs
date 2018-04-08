@@ -1,5 +1,7 @@
 ﻿using System.Web.Mvc;
+using GucciPriceIntelligence.Models;
 using GucciPriceIntelligence.Models.Entities;
+using GucciPriceIntelligence.Utilities.Db;
 
 namespace GucciPriceIntelligence.Controllers
 {
@@ -7,10 +9,11 @@ namespace GucciPriceIntelligence.Controllers
     {
         public ActionResult Category(string category)
         {
-            var categoryInstance = new Category();
-            categoryInstance.PageName = category;
-            categoryInstance.CategoryName = category;
-            return View(categoryInstance);
+            CategoryDbContext db = new CategoryDbContext();
+            CategoryViewModels categoryViewModels = new CategoryViewModels();
+            categoryViewModels.CategoryName = category;
+            categoryViewModels.SubCategories = db.GetSubCategoriesWithImage(category);
+            return View(categoryViewModels);
         }
     }
 }

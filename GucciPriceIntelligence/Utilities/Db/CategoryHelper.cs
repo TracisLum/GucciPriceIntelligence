@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using GucciPriceIntelligence.Models.Entities;
+using GucciPriceIntelligence.Models.Classes;
 
 namespace GucciPriceIntelligence.Utilities.Db
 {
@@ -14,6 +14,11 @@ namespace GucciPriceIntelligence.Utilities.Db
 
             return null;
         }
+        public static List<Category> GetCategories(string cateName)
+        {
 
+
+            return null;
+        }
     }
 }
