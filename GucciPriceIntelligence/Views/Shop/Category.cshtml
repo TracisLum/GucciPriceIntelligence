@@ -22,7 +22,7 @@
                         <img src="/Content/image/@imageUrl" alt = "" />
                     </a>
                     <div class="image-gallery-item-text-content">
-                        <h3 class="text-center"><a href="@Url.Action("ListProduct", "ListProduct", new {category = category.Name})">@category.Name.Replace('-',' ')</a></h3>
+                        <h3 class="text-center"><a href="@Url.Action("ListProduct", "Category", new {category = category.Name})">@category.Name.Replace('-',' ')</a></h3>
                     </div>
                 </div>
             }
