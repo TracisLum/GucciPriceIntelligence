@@ -5,7 +5,7 @@ using System.Web;
 
 namespace GucciPriceIntelligence.Models.Entities
 {
-    public class ProductCategory
+    public class Category
     {
         public string Name { get; set; }
         public int Level { get; set; }

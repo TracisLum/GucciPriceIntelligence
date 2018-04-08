@@ -17,9 +17,9 @@
         </button>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item">@Html.ActionLink("Men", "Men", "Category", new { category = "Men", level = 0 }, new { @class = "nav-link" })</li>
-                <li class="nav-item">@Html.ActionLink("Women", "Women", "Category", new {category = "Women", level = 0}, new {@class = "nav-link"})</li>
-                <li class="nav-item">@Html.ActionLink("Boys", "Boys", "Category", new { category = "Boys", level = 1 }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Boys", "Category", "Shop", new { category = "Boys"}, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Men", "Category", "Shop", new { category = "Men"}, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Women", "Category", "Shop", new {category = "Women"}, new {@class = "nav-link"})</li>
                 @*<li class="nav-item">@Html.ActionLink("About", "About", "Home", new {area = ""}, new {@class = "nav-link"})</li>
                 <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", new {area = ""}, new {@class = "nav-link"})</li>*@
             </ul>

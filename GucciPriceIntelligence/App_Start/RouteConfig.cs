@@ -15,7 +15,7 @@ namespace GucciPriceIntelligence
 
             routes.MapRoute(
                 "Category",
-                "Shop/Category/{cat_1}",
+                "Shop/Category/{category}",
                 new { Controller = "Shop", action = "Category"}
             );
 

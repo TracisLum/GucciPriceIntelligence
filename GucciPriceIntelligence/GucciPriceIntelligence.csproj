@@ -204,9 +204,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Entities\Country.cs" />
-    <Compile Include="Models\Entities\Product.cs" />
-    <Compile Include="Models\Entities\ProductCategory.cs" />
+    <Compile Include="Models\Classes\Country.cs" />
+    <Compile Include="Models\Classes\Product.cs" />
+    <Compile Include="Models\Classes\Category.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +226,7 @@
     <Content Include="Content\image\Boy_Homepage_Cover.jpg" />
     <Content Include="Content\image\HomepageHeroHeaderMedium_GQ_001_Default.jpg" />
     <Content Include="Content\image\Men_HomePage_Cover.jpg" />
+    <Content Include="Content\image\products\categories\boys\Banner_boys.jpg" />
     <Content Include="Content\image\products\categories\Men_Bag_Cover.jpg" />
     <Content Include="Content\image\products\categories\women\Boy_Homepage_Cover.jpg" />
     <Content Include="Content\image\products\categories\women\Men_Bag_Cover.jpg" />
@@ -306,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Utilities\Routing\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>

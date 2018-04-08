@@ -9,7 +9,7 @@ namespace GucciPriceIntelligence.Utilities.Db
 {
     public static class CategoryHelper
     {
-        public static List<ProductCategory> GetCategories(int level)
+        public static List<Category> GetCategories(int level)
         {
 
             return null;

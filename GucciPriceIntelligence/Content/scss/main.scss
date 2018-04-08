@@ -1,6 +1,12 @@
 ﻿@import '_banner.scss';
 @import '_responsive.scss';
 
+.divider-line{
+    width:100%;
+    padding:5px;
+    border-bottom: 1px solid rgba(86, 80, 80, 0.79);
+}
+
 .navbar{
     font-size:0.9rem;
 }
@@ -16,4 +22,27 @@
 .blank-space{
     height:60px;
     width:100%;
+}
+
+.site-description{
+    .text-content{
+        font-size:1.2rem;
+        padding: 2% 0;
+    }
+}
+
+.title-padding{
+    padding: 0 0 20px;
+}
+
+.category-gallery{
+    .category-name{
+        padding:20px 0;
+        a:hover{
+            text-decoration:none;
+        }
+    }
+}
+.category-name{
+
 }

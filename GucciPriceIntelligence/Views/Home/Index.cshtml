@@ -3,29 +3,46 @@
 }
 
 <div class="blank-space"></div>
+<div class="blank-space"></div>
 
 <section class="container body-content">
     <div class="row">
-        
+        <div class="col-md-12 text-center site-description">
+            <h1>Gucci Price Intelligence</h1>
+            <p class="text-content">
+                Compare Gucci product prices within different countries using the currency you select.
+            </p>
+        </div>
     </div>
+    <div class="divider-line"></div>
+    <div class="blank-space"></div>
     <div class="row category-gallery">
         <div class="col-md-12">
-            <h1 class="text-center">Categories</h1>
+            <h1 class="text-center title-padding">Categories</h1>
         </div>
         <div class="col-md-4">
-            <a href="@Url.Action("Category", "Shop", new {cat_1 = "Boys"})">
+            <a href="@Url.Action("Category", "Shop", new {category = "Boys"})">
                 <img src="/Content/image/Boy_Homepage_Cover.jpg" alt=""/>
             </a>
+            <div class="category-name">
+                <h3 class="text-center product-title"><a href="@Url.Action("Category", "Shop", new {category = "Boys"})">Boys</a></h3>
+            </div>
         </div>
         <div class="col-md-4">
-            <a href="@Url.Action("Category", "Shop", new {cat_1 = "Men"})">
+            <a href="@Url.Action("Category", "Shop", new {category = "Men"})">
                 <img src="/Content/image/Men_HomePage_Cover.jpg" alt="" />
             </a>
+            <div class="category-name">
+                <h3 class="text-center product-title"><a href="@Url.Action("Category", "Shop", new {category = "Men"})">Men</a></h3>
+            </div>
         </div>
         <div class="col-md-4">
-            <a href="@Url.Action("Category", "Shop", new {cat_1 = "Women"})">
+            <a href="@Url.Action("Category", "Shop", new {category = "Women"})">
                 <img src="/Content/image/Women_Homepage_Cover.jpg" alt="" />
             </a>
+            <div class="category-name">
+                <h3 class="text-center product-title"><a href="@Url.Action("Category", "Shop", new {category = "Women"})">Women</a></h3>
+            </div>
         </div>
     </div>
 </section>
