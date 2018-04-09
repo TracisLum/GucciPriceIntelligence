@@ -15,8 +15,8 @@ namespace GucciPriceIntelligence
 
             routes.MapRoute(
                 "Product",
-                "Shop/{category}/{product}",
-                new { controller = "Shop", action = "Category" }
+                "Shop/{category}/{subcategory}",
+                new { controller = "Shop", action = "ListProducts"}
             );
 
             routes.MapRoute(

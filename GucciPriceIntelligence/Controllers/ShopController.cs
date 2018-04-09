@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using GucciPriceIntelligence.Models;
 using GucciPriceIntelligence.Models.Entities;
+using GucciPriceIntelligence.Models.ViewModels;
 using GucciPriceIntelligence.Utilities.Db;
 
 namespace GucciPriceIntelligence.Controllers
@@ -14,6 +15,15 @@ namespace GucciPriceIntelligence.Controllers
             categoryViewModels.CategoryName = category;
             categoryViewModels.SubCategories = db.GetSubCategoriesWithImage(category);
             return View(categoryViewModels);
+        }
+
+        public ActionResult ListProducts(string category, string subcategory)
+        {
+            ProductDbContext db = new ProductDbContext();
+            ListProductsViewModels listProductsViewModels = new ListProductsViewModels();
+            listProductsViewModels.CategoryName = subcategory;
+            listProductsViewModels.Products = db.GetCategoryProducts(subcategory);
+            return View(listProductsViewModels);
         }
     }
 }

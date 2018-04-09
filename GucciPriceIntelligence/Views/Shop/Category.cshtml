@@ -15,14 +15,14 @@
             @foreach (var category in Model.SubCategories)
             {
                 <div class="col-md-4 image-gallery-item">
-                    <a href="@Url.Action("ListProduct", "Category", new {category = category.Name})">
+                    <a href="@Url.Action("ListProducts", "Shop", new {category = Model.CategoryName, subcategory = category.Name})">
                         @{
                             string imageUrl = category.ImageUrl.Replace('\\', '/');
                         }
                         <img src="/Content/image/@imageUrl" alt = "" />
                     </a>
                     <div class="image-gallery-item-text-content">
-                        <h3 class="text-center"><a href="@Url.Action("ListProduct", "Category", new {category = category.Name})">@category.Name.Replace('-',' ')</a></h3>
+                        <h3 class="text-center"><a href="@Url.Action("ListProducts", "Shop", new {category = Model.CategoryName, subcategory = category.Name})">@category.Name.Replace('-',' ')</a></h3>
                     </div>
                 </div>
             }
