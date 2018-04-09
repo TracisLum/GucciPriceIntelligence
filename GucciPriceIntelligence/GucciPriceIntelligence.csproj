@@ -203,9 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.cs" />
-    <Compile Include="Migrations\201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.Designer.cs">
-      <DependentUpon>201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.cs</DependentUpon>
+    <Compile Include="Migrations\201804090901249_InitialCreate.cs" />
+    <Compile Include="Migrations\201804090901249_InitialCreate.Designer.cs">
+      <DependentUpon>201804090901249_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -325,8 +325,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.resx">
-      <DependentUpon>201804081209100_GucciPriceIntelligence.Utilities.Db.CategoryDbContext.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804090901249_InitialCreate.resx">
+      <DependentUpon>201804090901249_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
